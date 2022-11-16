@@ -35,12 +35,13 @@ let App = () => {
   let filteredArray = cityList.filter((data) => {
     return data.country == "India";
   });
+  let count = 1;
 
   return (
     <div id="main">
       <ol>
         {filteredArray.map((city, index) => (
-          <li key={`location${index}`}>{city.name}</li>
+          <li key={`location${index+1}`}>{city.name}</li>
         ))}
       </ol>
     </div>
